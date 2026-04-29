@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hindustan University</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial,sans-serif;
+    }
+
+    body{
+        background:#f2f2f2;
+        color:#002e5d;
+    }
+
+/* Header */
+    header{
+        position: fixed;
+        background:rgb(247, 182, 61);
+        padding:30px 80px;
+        width: 100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .logo{
+        font-size:42px;
+        font-weight:bold;
+        color:white;
+    }
+
+    nav a{
+        text-decoration:none;
+        color:white;
+        margin-left:35px;
+        font-size:18px;
+        font-weight:bold;
+    }
+
+/* Hero Section */
+    .hero{
+        height:550px;
+        background:
+        url("https://ik.imagekit.io/syustaging/SYU_PREPROD/COVER-IMAGE_zpx8CfmE-I.webp?tr=w-3840");
+        background-size:cover;
+        background-position:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        color:whitesmoke;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+        margin-top:230px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:40px;
+    }
+
+    .hero button{
+        margin-bottom: 30px;
+        padding:20px 60px;
+        font-size:32px;
+        border:none;
+        background:rgb(51, 51, 242);
+        font-weight:bold;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    .hero button:hover{
+        background: orange;
+    }
+
+/* Stats */
+    .stats{
+        display:flex;
+        justify-content:space-around;
+        background:#fff;
+        padding:70px 30px;
+        text-align:center;
+    }
+
+    .stat h2{
+        font-size:32px;
+        color:#003b75;
+        margin-bottom:15px;
+    }
+
+    .stat p{
+        font-size:18px;
+    }
+
+        /* Departments */
+    .departments{
+        padding:20px;
+    }
+
+    .departments h1{
+        text-align:center;
+        font-size:30px;
+        margin-bottom:70px;
+    }
+
+    .cards{
+        display:flex;
+        gap:40px;
+        justify-content:center;
+    }
+
+    .card{
+        width:550px;
+        background:white;
+        border-radius:18px;
+        overflow:hidden;
+    }
+
+    .top1{
+        height:250px;
+        background-image:
+        url("https://assets.kollegeapply.com/images/1751564058852-1651230962phpC5POSe.jpeg");
+    }
+
+    .top2{
+        height:250px;
+        background-image:
+        url("https://assets.kollegeapply.com/images/1751564058852-1651230962phpC5POSe.jpeg");
+    }
+
+    .top3{
+        height:250px;
+        background-image:
+        url("https://assets.kollegeapply.com/images/1751564058852-1651230962phpC5POSe.jpeg");
+    }
+
+    .card-content{
+        padding:40px;
+    }
+
+    .card h3{
+        font-size:20px;
+        margin-bottom:25px;
+    }
+
+    .card p{
+        font-size:18px;
+        line-height:1.5;
+        color:#555;
+    }
+
+    .card a{
+        display:inline-block;
+        margin-top:30px;
+        font-size:20px;
+        font-weight:bold;
+        text-decoration:none;
+        color:#003b75;
+    }
+
+/* Footer */
+    footer{
+        background:linear-gradient(rgb(101, 68, 7),rgb(4, 24, 142));
+        color:white;
+        margin-top:90px;
+        padding:70px 100px 30px;
+        border-radius:30px 30px 0 0;
+    }
+
+    .footer-box{
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        margin-bottom:50px;
+    }
+
+    .footer-col h3{
+        font-size:38px;
+        margin-bottom:30px;
+    }
+
+    .footer-col p{
+        font-size:28px;
+        line-height:1.8;
+    }
+
+    .footer-col a{
+        display:block;
+        text-decoration:none;
+        color:#ddd;
+        font-size:28px;
+        margin-bottom:20px;
+    }
+
+    .line{
+        height:1px;
+        background:#555;
+        margin:30px 0;
+    }
+
+    .copy{
+        text-align:center;
+        font-size:26px;
+    }
+
+    .card{
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+        box-shadow:0 8px 25px rgba(0,0,0,.2);
+    }
+
+    .hero-content button{
+        transition: 0.3s;
+    }
+    .hero-content button:hover{
+        transform: scale(1.1);
+    }
+
+    .footer-col{
+        padding:0 20px;
+        border-right:2px solid white;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hindustan University</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Academics</a>
+            <a href="#">Admissions</a>
+            <a href="#">Campus Life</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Your Future</h1>
+            <p>Discover a world-class education designed to innovate,inspire and elevate your career.</p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2>50+</h2>
+                <p>Undergraduate Programs</p>
+        </div>
+        <div class="stat">
+            <h2>15:1</h2>
+            <p>Student-to-Faculty Ratio</p>
+        </div>
+        <div class="stat">
+            <h2>95%</h2>
+            <p>Graduate Employment</p>
+        </div>
+        <div class="stat">
+            <h2>120+</h2>
+            <p>Student Clubs & Organizations</p>
+        </div>
+
+    </section>
+
+
+    <section class="departments">
+        <h1>Featured Departments</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="top1"></div>
+                <div class="card-content">
+                    <h3>College of Engineering</h3>
+                    <p>Build the future with cutting-edge labs and industry experienced faculty Programs in Mechanical, Civil and Computer Engineering.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="top2"></div>
+                <div class="card-content">
+                    <h3>School of Business</h3>
+                    <p>Develop leadership and entrepreneurial skills to thrive in the global marketplace with accredited programs.</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="top3"></div>
+                <div class="card-content">
+                    <h3>Arts & Sciences</h3>
+
+                    <p>Explore your passions with diverse programs in Humanities,Biological Sciences and Digital Arts.</p>
+                    
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-box">
+            <div class="footer-col">
+                <h3>Hindustan University</h3>
+                <p>Hits Deemed University.<br>Chennai,padur City, <br>Phone: (+91)9874561230</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Financial Aid</a>
+                <a href="#">Student Portal</a>
+                <a href="#">Alumni</a>
+            </div>
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <a href="#">Library</a>
+                <a href="#">Campus Map</a>
+                <a href="#">Career Center</a>
+                <a href="#">Athletics</a>
+            </div>
+        </div>
+        
+        <div class="line"></div>
+        
+        <div class="copy">
+            &copy; 2026 Hindustan University. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

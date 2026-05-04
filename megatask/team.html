@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megatask</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+        }
+        header{
+            height: 100%;
+        }
+
+        /* HERO */
+        .hero{
+            display:flex;
+            flex-direction:column;
+            height:100vh;
+            background:url('//bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg') center/cover no-repeat;
+            position:relative;
+            color:#fff;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:25px 60px;
+        }
+
+        .logo{
+            font-size:30px;
+            letter-spacing:2px;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:30px;
+        }
+
+        .nav-links a{
+            color:#fff;
+            font-size:14px;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#ff2c55;
+            text-decoration:underline;
+        }
+
+        .socials span{
+            background:#e78294;
+            width:35px;
+            height:35px;
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            border-radius:50%;
+            margin-left:10px;
+        }
+
+        .socials span:hover{
+            background: white;
+        }
+
+        .socials a{
+            color:#000;
+        }
+
+
+        /* DECORATIONS */
+        .leaf1,.leaf2,.badam1{
+            position:absolute;
+        }
+
+        .leaf1{ top:120px; right:50px; }
+        .leaf2{ bottom:40px; left:-30px; }
+        .badam1{ top:10px; right:200px; }
+
+        /* CTA */
+        .cta-box{
+            position:fixed;
+            right:0;
+            top:50%;
+            transform:translateY(-50%);
+            text-align:center;
+            z-index: 1000;
+        }
+
+        .demo{
+            background:#fff;
+            color:#000;
+            padding:12px;
+            font-weight:bold;
+        }
+
+        .cta-box button{
+            margin-right: -40%;
+            margin-top:10px;
+            padding:12px;
+            border:none;
+            background:#ff2c55;
+            color:#fff;
+            cursor:pointer;
+        }
+
+        .history{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 80px;
+    background:#e6dddd;
+}
+
+/* TEXT */
+.history-text{
+    width:50%;
+    max-width:500px;
+}
+
+.history-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:65px;
+    font-weight:400;
+    line-height:1.2;
+}
+
+.history-text h1 span{
+    font-style:italic;
+}
+
+.history-text p{
+    margin:30px 0;
+    color:#666;
+    line-height:1.8;
+}
+
+/* BUTTON */
+.read-btn{
+    padding:12px 30px;
+    border:1px solid #000;
+    text-decoration:none;
+    color:#000;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    background:#ff2c55;
+    color:#fff;
+}
+
+/* IMAGE */
+.history-img{
+    position:relative;
+    width:40%;
+}
+
+.history-img img{
+    width:100%;
+}
+
+
+.history1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 80px;
+    background:white;
+    gap:60px;
+}
+
+/* IMAGE LEFT */
+.history1-img{
+    width:45%;
+}
+
+.history1-img img{
+    width:100%;
+    
+}
+
+/* TEXT RIGHT */
+.history1-text{
+    width:45%;
+    text-align:center;
+}
+
+.history1-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:65px;
+    font-weight:400;
+    line-height:1.2;
+}
+
+.history1-text h1 span{
+    font-style:italic;
+}
+
+.history1-text p{
+    margin:30px 0;
+    color:#666;
+    line-height:1.8;
+}
+
+
+
+
+        .footer{
+            position: relative;
+            height: 60vh;
+            background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff') no-repeat center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:#fff;
+            z-index: -100;
+        }
+
+        /* Dark overlay */
+        .footer .overlay1{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.65);
+        }
+
+        /* Content */
+        .footer .content1{
+            position:relative;
+            z-index:2;
+        }
+
+        .logo1{
+            font-size:50px;
+            font-weight:500;
+            letter-spacing:2px;
+            margin-bottom:20px;
+        }
+
+        .copyright{
+            font-size:18px;
+            line-height:1.6;
+            margin-bottom:30px;
+        }
+
+        /* Social Icons */
+        .social-icons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+
+        .social-icons a{
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background:#fff;
+            color:#000;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .social-icons a:hover{
+            background:#ff4d6d;
+            color:#fff;
+            transform:translateY(-5px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #686363;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            z-index: 1000;
+            background-color: #ff2c55; 
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        .ourteam{
+            text-align: center;
+            font-size: 80px;
+            margin-top: 150px;
+            font-style:normal;
+        }
+
+
+    
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">bridge</div>
+            <ul class="nav-links">
+                <li><a href="megatask.html">HOME</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="socials">
+                <span><a href="#"><i class="fa-brands fa-facebook-f"></i></a></span>
+                <span><a href="#"><i class="fa-brands fa-twitter"></i></a></span>
+                <span><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+            </div>
+        </nav>
+
+
+        <img class="leaf1" src="//bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-graphic-2.png">
+        <img class="leaf2" src="//bridge248.qodeinteractive.com/wp-content/uploads/2018/06/graphic-1.png">
+        <img class="badam1" src="//bridge248.qodeinteractive.com/wp-content/uploads/2018/06/graphic-5.png">
+
+
+        <div class="cta-box">
+            <div class="demo">630+ <span>Bridge demos</span></div>
+            <button>BUY NOW $69</button>
+            </div>
+        </div>
+
+        <h1 class="ourteam">Our Team</h1>
+
+        
+
+</header>
+<section class="history">
+
+    <div class="history-text">
+        <h1><span>History</span><br>of manufacturer</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam quis nostrud exercitation
+        </p>
+
+        <a href="#" class="read-btn">READ ALL</a>
+    </div>
+
+    <div class="history-img">
+        <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-1.png" alt="">
+        
+        
+    </div>
+
+</section>
+
+<section class="history1">
+
+    <!-- IMAGE FIRST -->
+    <div class="history1-img">
+        <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/team-2.png" alt="">
+    </div>
+
+    <!-- TEXT SECOND -->
+    <div class="history1-text">
+        <h1><span>History</span><br>of manufacturer</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam quis nostrud exercitation
+        </p>
+
+        <a href="#" class="read-btn">READ ALL</a>
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+    <div class="overlay1"></div>
+
+    <div class="content1">
+        <h1 class="logo1">bridge</h1>
+
+        <p class="copyright">
+            © Copyright Qode Interactive – All Rights Reserved <br>
+            Proudly Made For You.
+        </p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+</footer>
+
+    <a href="#top" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+
+
+
+</body>
+</html>

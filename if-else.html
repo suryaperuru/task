@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--   Number(prompt("Enter Month Numb"))
+    prompt("Is Weekend? (yes/no)") === "yes"-->
+
+    <script>
+        //AND OPERATOR ALL THREE CONDITIONS TRUE OUTPUT WILL BE TRUE
+
+        let hasID = true;
+        let hasEntryPass = true;
+        let age = 20;
+
+        if (hasID && hasEntryPass && age >= 18) {
+            console.log("Entry Allowed");
+        } else {
+            console.log("Entry Not Allowed");
+        }
+
+    </script>
+    <script>
+        //logical AND , OR . 
+        let hasID1 = true;
+        let hasEntryPass1 = false;
+        let hasVIPPass = true;
+        let age1 = 20;
+
+        if ((hasEntryPass1 || hasVIPPass) && hasID1 && age1 >= 18) {
+            console.log("Entry Allowed");
+        } else {
+            console.log("Entry Denied");
+        }
+    </script>
+    <script>
+        // IF ANY ONE CONDITION IS TRUE OUT WILL BE TRUE
+        let hasID2 = false;
+        let hasEntryPass2 = true;
+        let hasVIPPass2 = false;
+
+        if (hasID2 || hasEntryPass2 || hasVIPPass2) {
+            console.log("Entry Allowed");
+        } else {
+            console.log("Entry Denied");
+        }
+    </script>
+    <script>
+        //OR IF ONE STATEMENT IS TRUE - TRUE
+
+        let Weekend = false;
+        let Holiday = true;
+        let LeaveApproved = false;
+
+        if (Weekend || Holiday || LeaveApproved) {
+            console.log("Take Rest");
+        } else {
+            console.log("Continue working");
+        }
+    </script>
+    
+    <script>
+
+        let isWeekend = prompt("Is Weekend? (yes/no)") === "yes";
+        let isHoliday = prompt("Is Holiday? (yes/no)") === "yes";
+        let hasLeaveApproved = prompt("Is LeaveApproved? (yes/no)") === "yes";
+
+        if (isWeekend && isHoliday && hasLeaveApproved) {
+            console.log("You Can Take Leave");
+        } else {
+            console.log("Leave Not Allowed");
+        }
+
+    </script>
+
+    <script>
+        let isWeekend1 = false;
+        let isHoliday1 = true;
+        let hasLeaveApproved1 = true;
+
+        if ((isWeekend1 || isHoliday1) && hasLeaveApproved1) {
+            console.log("Leave Approved");
+        } else {
+            console.log("Leave Not Approved");
+        }
+    </script>
+
+    
+
+    <script>
+        //switch
+        let month = prompt("Enter a month name:");
+;
+
+        switch (month) {
+            case "March":
+            case "April":
+            case "May":
+            case "June":
+                console.log("Summer Season");
+                break;
+
+            case "July":
+            case "August":
+            case "September":
+            case "October":
+                console.log("Rainy Season");
+                break;
+
+            
+            case "November":
+            case "December":
+            case "January":
+            case "February":
+                console.log("Winter Season");
+                break;
+
+            default:
+                console.log("Invalid Month");
+        }
+    </script>
+    <script>
+        let monthNumber = Number(prompt("Enter a Month num:"));
+
+        switch (monthNumber) {
+            case 1:
+                console.log("January");
+                break;
+            case 2:
+                console.log("February");
+                break;
+            case 3:
+                console.log("March");
+                break;
+            case 4:
+                console.log("April");
+                break;
+            case 5:
+                console.log("May");
+                break;
+            case 6:
+                console.log("June");
+                break;
+            case 7:
+                console.log("July");
+                break;
+            case 8:
+                console.log("August");
+                break;
+            case 9:
+                console.log("September");
+                break;
+            case 10:
+                console.log("October");
+                break;
+            case 11:
+                console.log("November");
+                break;
+            case 12:
+                console.log("December");
+                break;
+            default:
+                console.log("Invalid Month Number");
+        }
+    </script>
+</body>
+</html>

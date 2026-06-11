@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const movies = [ 
+        { id: 1, title: "Bahubali", rating: 9 },
+        { id: 2, title: "Pushpa", rating: 8 },
+        { id: 3, title: "RRR", rating: 10 },
+        { id: 4, title: "Salaar", rating: 7 }
+        ];
+
+        // 1
+        const movieTitles = movies.map(movie => movie.title);
+        console.log(movieTitles);
+
+        // 2
+        const movieRatings = movies.map(movie => movie.rating);
+        console.log(movieRatings);
+
+        // 3
+        const increasedRatings = movies.map(movie => ({
+        ...movie,
+        rating: movie.rating + 1
+        }));
+        console.log(increasedRatings);
+
+        // 4
+        const ratingGreaterThan8 = movies.filter(movie => movie.rating > 8);
+        console.log(ratingGreaterThan8);
+
+        // 5
+        const ratingLessThan9 = movies.filter(movie => movie.rating < 9);
+        console.log(ratingLessThan9);
+
+        // 6
+        const movieId3 = movies.find(movie => movie.id === 3);
+        console.log(movieId3);
+
+        // 7
+        const pushpaMovie = movies.find(movie => movie.title === "Pushpa");
+        console.log(pushpaMovie);
+
+        // 8
+        const totalMovieRatings = movies.reduce((sum, movie) => sum + movie.rating, 0);
+        console.log(totalMovieRatings);
+
+
+
+        const products = [
+        { id: 1, name: "Laptop", price: 50000 },
+        { id: 2, name: "Mouse", price: 500 },
+        { id: 3, name: "Keyboard", price: 1500 },
+        { id: 4, name: "Monitor", price: 12000 }
+        ];
+
+        // 9
+        const productNames = products.map(product => product.name);
+        console.log(productNames);
+
+        // 10
+        const productPrices = products.map(product => product.price);
+        console.log(productPrices);
+
+        // 11
+        const increasedPrices = products.map(product => ({
+        ...product,
+        price: product.price + 1000
+        }));
+        console.log(increasedPrices);
+
+        // 12
+        const productsAbove1000 = products.filter(product => product.price > 1000);
+        console.log(productsAbove1000);
+
+        // 13
+        const productsBelow10000 = products.filter(product => product.price < 10000);
+        console.log(productsBelow10000);
+
+        // 14
+        const productId2 = products.find(product => product.id === 2);
+        console.log(productId2);
+
+        // 15
+        const monitorProduct = products.find(product => product.name === "Monitor");
+        console.log(monitorProduct);
+
+        // 16
+        const totalProductCost = products.reduce((sum, product) => sum + product.price, 0);
+        console.log(totalProductCost);
+
+
+
+        const scores = [45, 80, 20, 100, 60];
+
+        // 17
+        const add10Runs = scores.map(score => score + 10);
+        console.log(add10Runs);
+
+        // 18
+        const add5Runs = scores.map(score => score + 5);
+        console.log(add5Runs);
+
+        // 19
+        const scoresAbove50 = scores.filter(score => score > 50);
+        console.log(scoresAbove50);
+
+        // 20
+        const scoresAboveOrEqual80 = scores.filter(score => score >= 80);
+        console.log(scoresAboveOrEqual80);
+
+        // 21
+        const firstScoreAbove70 = scores.find(score => score > 70);
+        console.log(firstScoreAbove70);
+
+        // 22
+        const firstScore100 = scores.find(score => score === 100);
+        console.log(firstScore100);
+
+        // 23
+        const totalRuns = scores.reduce((sum, score) => sum + score, 0);
+        console.log(totalRuns);
+
+        // 24
+        const averageScore = totalRuns / scores.length;
+        console.log(averageScore);
+
+
+
+        const students = [
+        { name: "Ravi", marks: 90 },
+        { name: "Priya", marks: 75 },
+        { name: "Rahul", marks: 40 },
+        { name: "Anu", marks: 95 }
+        ];
+
+        // 25
+        const studentNames = students.map(student => student.name);
+        console.log(studentNames);
+
+        // 26
+        const studentMarks = students.map(student => student.marks);
+        console.log(studentMarks);
+
+        // 27
+        const increasedMarks = students.map(student => ({
+        ...student,
+        marks: student.marks + 5
+        }));
+        console.log(increasedMarks);
+
+        // 28
+        const above80 = students.filter(student => student.marks > 80);
+        console.log(above80);
+
+        // 29
+        const below50 = students.filter(student => student.marks < 50);
+        console.log(below50);
+
+        // 30
+        const rahulStudent = students.find(student => student.name === "Rahul");
+        console.log(rahulStudent);
+
+        // 31
+        const firstAbove90 = students.find(student => student.marks > 90);
+        console.log(firstAbove90);
+
+        // 32
+        const totalMarks = students.reduce((sum, student) => sum + student.marks, 0);
+        console.log(totalMarks);
+
+
+
+        const foodOrders = [
+        { item: "Pizza", price: 300 },
+        { item: "Burger", price: 150 },
+        { item: "Biryani", price: 250 },
+        { item: "Ice Cream", price: 100 }
+        ];
+
+        // 33
+        const foodItems = foodOrders.map(food => food.item);
+        console.log(foodItems);
+
+        // 34
+        const foodPrices = foodOrders.map(food => food.price);
+        console.log(foodPrices);
+
+        // 35
+        const increasedFoodPrices = foodOrders.map(food => ({
+        ...food,
+        price: food.price + 50
+        }));
+        console.log(increasedFoodPrices);
+
+        // 36
+        const foodAbove200 = foodOrders.filter(food => food.price > 200);
+        console.log(foodAbove200);
+
+        // 37
+        const foodBelow250 = foodOrders.filter(food => food.price < 250);
+        console.log(foodBelow250);
+
+        // 38
+        const biryani = foodOrders.find(food => food.item === "Biryani");
+        console.log(biryani);
+
+        // 39
+        const firstFoodAbove250 = foodOrders.find(food => food.price > 250);
+        console.log(firstFoodAbove250);
+
+        // 40
+        const totalFoodBill = foodOrders.reduce((sum, food) => sum + food.price, 0);
+        console.log(totalFoodBill);
+
+
+
+        // 41
+        const upperMovieTitles = movies.map(movie => movie.title.toUpperCase());
+        console.log(upperMovieTitles);
+
+        // 42
+        const lowerProductNames = products.map(product => product.name.toLowerCase());
+        console.log(lowerProductNames);
+
+        // 43
+        const studentsStartWithR = students.filter(student =>
+        student.name.startsWith("R")
+        );
+        console.log(studentsStartWithR);
+
+        // 44
+        const movieTitleLength = movies.filter(movie =>
+        movie.title.length > 5
+        );
+        console.log(movieTitleLength);
+
+        // 45
+        const combinedTotal = totalRuns + totalMarks;
+        console.log(combinedTotal);
+
+        // 46
+        const expensiveProduct = products.reduce((max, product) =>
+        product.price > max.price ? product : max
+        );
+        console.log(expensiveProduct);
+
+        // 47
+        const highestScore = Math.max(...scores);
+        console.log(highestScore);
+
+        // 48
+        const highestMarksStudent = students.reduce((max, student) =>
+        student.marks > max.marks ? student : max
+        );
+        console.log(highestMarksStudent);
+
+        // 49
+        const highestRatedMovie = movies.reduce((max, movie) =>
+        movie.rating > max.rating ? movie : max
+        );
+        console.log(highestRatedMovie);
+
+
+
+        const employees = [
+        { id: 1, name: "Arun", salary: 30000 },
+        { id: 2, name: "Sneha", salary: 45000 },
+        { id: 3, name: "Kiran", salary: 50000 },
+        { id: 4, name: "Divya", salary: 35000 }
+        ];
+
+        // 1. Employee names
+        console.log(employees.map(emp => emp.name));
+
+        // 2. Increase salary by 5000
+        console.log(
+        employees.map(emp => ({
+            ...emp,
+            salary: emp.salary + 5000
+        }))
+        );
+
+        // 3. Salary greater than 40000
+        console.log(
+        employees.filter(emp => emp.salary > 40000)
+        );
+
+        // 4. Find employee by ID 3
+        console.log(
+        employees.find(emp => emp.id === 3)
+        );
+
+        // 5. Total salary
+        console.log(
+        employees.reduce((sum, emp) => sum + emp.salary, 0)
+        );
+    </script>
+</body>
+</html>

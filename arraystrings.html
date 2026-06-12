@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System - String Methods</title>
+</head>
+<body>
+
+    <script>
+
+
+        const movies = [
+        {
+            id: 1,
+            title: "DEADPOOL ",
+            genre: "Sci-Fi",
+            year: 2024,
+            rating: 8.8,
+            language: "English"
+        },
+        {
+            id: 2,
+            title: "RRR",
+            genre: "Action",
+            year: 2022,
+            rating: 8.5,
+            language: "Telugu"
+        },
+        {
+            id: 3,
+            title: "Pushpa",
+            genre: "Action",
+            year: 2021,
+            rating: 8.2,
+            language: "Telugu"
+        },
+        {
+            id: 4,
+            title: "Baahubali",
+            genre: "Action",
+            year: 2015,
+            rating: 8.3,
+            language: "Telugu"
+        },
+        {
+            id: 5,
+            title: "PiratesOfCaribbean",
+            genre: "Action",
+            year: 2023,
+            rating: 8.7,
+            language: "English"
+        }
+        ];
+
+        // 1
+
+        console.log("Movie Title Lengths");
+
+        movies.forEach(movie => {
+            console.log(movie.title.trim(), "-", movie.title.trim().length);
+        });
+
+
+        // 2
+
+        console.log("Movie Titles in Uppercase");
+
+        movies.forEach(movie => {
+            console.log(movie.title.trim().toUpperCase());
+        });
+
+
+        // 3
+
+        console.log("Movie Titles in Lowercase");
+
+        movies.forEach(movie => {
+            console.log(movie.title.trim().toLowerCase());
+        });
+
+        // 4
+
+        console.log("Trim Spaces");
+
+        movies.forEach(movie => {
+            console.log(movie.title.trim());
+        });
+
+        // 5
+
+        console.log("Movies Containing 'man'");
+
+        const includeMovies = movies.filter(movie =>
+            movie.title.toLowerCase().includes("man")
+        );
+
+        console.log(includeMovies);
+
+        // 6
+
+        console.log("Movies Starting With B");
+
+        const startMovies = movies.filter(movie =>
+            movie.title.trim().startsWith("B")
+        );
+
+        console.log(startMovies);
+
+        // 7
+
+        console.log("Movies Ending With i");
+
+        const endMovies = movies.filter(movie =>
+            movie.title.trim().endsWith("i")
+        );
+
+        console.log(endMovies);
+
+        // 8
+        console.log("Position of 'Man'");
+
+        movies.forEach(movie => {
+            console.log(
+                movie.title,
+                movie.title.toLowerCase().indexOf("man")
+            );
+        });
+
+        // 9
+
+        console.log("First Character");
+
+        movies.forEach(movie => {
+            console.log(
+                movie.title.trim(),
+                movie.title.trim().charAt(0)
+            );
+        });
+
+        // 10. replaceAll()
+
+        console.log("Replace '-' With Space");
+
+        movies.forEach(movie => {
+
+            console.log(
+                movie.title.replaceAll("-", " ")
+            );
+
+        });
+
+        // 11
+
+        console.log("Split Movie Title");
+
+        movies.forEach(movie => {
+
+            console.log(
+                movie.title.trim().split(" ")
+            );
+
+        });
+
+
+        // 12
+        console.log("Join Movie Titles");
+
+        const movieTitles = movies.map(movie => movie.title.trim());
+
+        console.log(movieTitles.join(" | "));
+
+
+        // 13
+
+        console.log("Concat English and Telugu Movies");
+
+        const englishMovies = movies
+        .filter(movie => movie.language == "English")
+        .map(movie => movie.title.trim());
+
+        const teluguMovies = movies
+        .filter(movie => movie.language == "Telugu")
+        .map(movie => movie.title.trim());
+
+        const allMovies = englishMovies.concat(teluguMovies);
+
+        console.log(allMovies);
+
+
+
+        let searchMovie = "rrr";
+
+        const result = movies.find(movie =>
+            movie.title.trim().toLowerCase() ==
+            searchMovie.toLowerCase()
+        );
+
+        console.log("Search Result");
+        console.log(result);
+
+
+        console.log("Total Movies :", movies.length);
+
+        console.log("Movie Names");
+
+        movies.forEach(movie => {
+
+            console.log(movie.title.trim());
+
+        });
+
+    </script>
+
+</body>
+</html>
